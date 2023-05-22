@@ -1,5 +1,7 @@
 package myArrayList;
 
+import java.util.Arrays;
+
 public class MyArrayList<E> {
     private int size = 0;
     private int capacity = 0;
@@ -14,11 +16,7 @@ public class MyArrayList<E> {
     public void add(Object o) {
         if (size >= capacity) {
             capacity = capacity * 2;
-            Object[] newArray = new Object[capacity];
-            for (int i = 0; i < size; i++) {
-                newArray[i] = array[i];
-                array[i] = null;
-            }
+            Object[] newArray = Arrays.copyOf(array, capacity);
             array = newArray;
         }
         array[size++] = o;
