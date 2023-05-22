@@ -2,8 +2,8 @@ package myQueue;
 
 public class Node<T> {
     private T value;
-    private myLinkedList.Node<T> next;
-    private myLinkedList.Node<T> prev;
+    private Node<T> next;
+    private Node<T> prev;
 
     public T getValue() {
         return value;
@@ -13,19 +13,19 @@ public class Node<T> {
         this.value = value;
     }
 
-    public myLinkedList.Node<T> getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(myLinkedList.Node<T> next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
-    public myLinkedList.Node<T> getPrev() {
+    public Node<T> getPrev() {
         return prev;
     }
 
-    public void setPrev(myLinkedList.Node<T> prev) {
+    public void setPrev(Node<T> prev) {
         this.prev = prev;
     }
 }
